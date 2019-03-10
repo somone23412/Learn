@@ -1,3 +1,6 @@
+# Design Pattern
+Design Pattern learning notes.
+
 # C++设计模式
 
 ## 什么是设计模式
