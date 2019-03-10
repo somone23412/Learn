@@ -251,7 +251,7 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 :NERDTree
 ```
 
-![a0e38790b3cf30828735e32f3235f632.png](en-resource://database/5893:0)
+![a0e38790b3cf30828735e32f3235f632.png](https://img-blog.csdnimg.cn/2019031019145576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAwNTkxNQ==,size_16,color_FFFFFF,t_70)
 
 可以看到树形结构的文件列表，回车可以进入查看文件
 “**Ctrl**+**w**”后按”**左/右**“键可以在两个窗口之间切换
