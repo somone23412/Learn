@@ -5,15 +5,15 @@
 原本我们使用指针是这样的：
 
 ```cpp
-    A* a;
-    a = new A(...);
+       A* a;
+       a = new A(...);
 ```
 
 而智能指针则是这样写:
 
 ```cpp
-    shared_ptr<A> a;
-    a = make_shared<A>(...);
+       shared_ptr<A> a;
+       a = make_shared<A>(...);
 ```
 
 ### shared_ptr的特点：
@@ -56,3 +56,22 @@ int main() {
 
 ```
 + 既保证了对象们谁也`不能单方面的销毁共享内存`，也保证了内存在不再需要的时候能顺利释放
+
+### 用内置指针初始化智能指针
+
+```cpp
+       shared_ptr<T> p(q); //q为内置指针
+       shared_ptr<T> p(new T(...)); //用new返回的指针初始化智能指针
+```
+
+因为智能指针的构造函数是`explicit（禁止隐式类型转换）`的，所以必须使用`以上`直接初始化的形式，以下的做法都是`错误`的：
+
+```cpp
+       shared_ptr<T> p = new T(...);
+       shared_ptr<T> p = q;
+```
+而这样的`显式绑定`是被允许的：
+
+```cpp
+       shared_ptr<T> p = shared_ptr<T>(q); 
+```
